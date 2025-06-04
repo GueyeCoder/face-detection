@@ -1,0 +1,94 @@
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.env
+.venv
+env.bak/
+venv.bak/
+.python-version
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Face detection specific
+*.h5
+*.hdf5
+*.pkl
+*.pb
+*.onnx
+*.pth
+*.pt
+*.weights
+*.caffemodel
+saved_models/
+checkpoints/
+models/
+pretrained/
+
+# Data files
+data/
+dataset/
+*.csv
+*.json
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.avi
+*.mov
+*.webm
+faces/
+images/
+# Add exceptions for sample images or datasets you want to include in the repo
+!sample_images/
+!examples/
+
+# Logs and temporary files
+logs/
+*.log
+tmp/
+temp/
+.ipynb_checkpoints/
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
