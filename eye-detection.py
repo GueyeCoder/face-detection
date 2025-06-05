@@ -2,10 +2,14 @@
 # -*- coding: utf-8 -*-
 
 
+
+
 import cv2 as cv
 
 ## chargger les classificateurs en cascade pre-entraines
 face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
+eye_cascade = cv.CascadeClassifier('haarcascade_eye.xml')
+
 
 ##Charger les images
 img = cv.imread('obama.jpg')
@@ -21,10 +25,15 @@ for face in faces:
     #dessiner le rectangle sur l'image
     cv.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
     
-    # Extraire les visages de l'image principale
-    face =img[y:y+h, x:x+w]
-    cv.imshow('face{}'.format(i), face)
-    i += 1
+
+## Execution de la detection des yeux
+eyes = eye_cascade.detectMultiScale(gray, 1.1, 3)
+
+# Affichage des yeux
+for (ex, ey, ew, eh) in eyes:
+    # dessiner un rectangle autour des yeux sur l'image principale
+    cv.rectangle(img, (ex, ey), (ex+ew, ey+eh), (255, 0, 0), 2)
+
 
 # Affiche image principale
 cv.imshow("image principale", img)
